@@ -1,0 +1,29 @@
+---
+title: "[해결] Next.js 빌드시 getStaticProps 오류 원인 분석"
+date: 2025-07-11
+categories: [Debug]
+tags: [Next.js, Static Build, 삽질]
+author: Frontend팀
+---
+
+# [해결] Next.js 빌드시 getStaticProps 오류 원인 분석
+
+## 증상
+
+- `Error: getStaticProps is not allowed in /_app.js`
+
+## 원인
+
+→ `_app.js`는 페이지가 아니라 전역 설정용이기 때문
+
+## 해결 방법
+
+- `getStaticProps`는 `pages/index.tsx` 같은 실제 페이지에서만 사용 가능
+
+## 회고
+
+> 문서 안 읽고 쓰면 무조건 한번은 당한다...
+
+## 참고자료
+
+- [공식문서](https://nextjs.org/docs/basic-features/data-fetching#getstaticprops-static-generation)

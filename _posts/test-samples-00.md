@@ -1,0 +1,35 @@
+---
+title: "Redis Streams를 도입하며 느낀 점"
+date: 2025-07-11
+categories: [Tech, Backend]
+tags: [Redis, Stream, Messaging]
+author: Infra팀
+---
+
+# Redis Streams를 도입하며 느낀 점
+
+## 왜 Redis Streams인가?
+
+기존에는 Kafka를 사용했지만...
+
+## 도입 과정
+
+1. Redis 모듈 테스트
+2. 소비자 그룹 설계
+3. 장애 상황 테스트
+
+## 도입 후 변화
+
+| 항목 | Before | After |
+|------|--------|-------|
+| 처리 지연 | 180ms | 45ms |
+| 큐 적체 | O | X |
+
+## 느낀 점
+
+- 사용은 쉽지만 운영 시 고려할 점도 많음
+- Kafka 대비 모니터링 도구는 부족
+
+## 참고자료
+
+- [Redis Streams 공식 문서](https://redis.io/docs/data-types/streams/)

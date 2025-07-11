@@ -1,0 +1,20 @@
+---
+title: "우리는 이렇게 코드 리뷰합니다"
+date: 2025-07-11
+categories: [Culture]
+tags: [Code Review, Team Culture]
+author: Tech리더
+---
+
+# 우리는 이렇게 코드 리뷰합니다
+
+## 리뷰 원칙
+
+- "작은 단위로 나누기"
+- "무조건 질문 가능"
+
+## 리뷰 예시
+
+```diff
+- const isValid = email.length > 0;
++ const isValidEmail = email.includes("@");
